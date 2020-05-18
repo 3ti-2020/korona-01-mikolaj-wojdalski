@@ -1,0 +1,116 @@
+
+
+
+
+@font-face {   font-family: 'font';   
+    src: url('Jersey Sharp.ttf') format('truetype'); 
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: repeat(5, 1fr);
+  height: 100vh;
+  grid-template-areas:
+    "top top top"
+    "left mid right "
+    "left mid right "
+    "leftv2 mid right "
+	"leftv2 mid right";
+}
+
+.item {
+  margin: 3px;
+  background-color: blue;
+}
+
+.top {
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+   font-size: 70px;
+   font-family: font;
+}
+
+.mid {
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+
+
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+   font-size: 70px;
+   font-family: font;
+}
+
+.leftv2 {
+  grid-area: leftv2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  font-size: 70px;
+  font-family: font;
+}
+
+
+
+
+.title {
+  font-size: 400%;
+}
+
+.check {
+  height: 80%;
+  width: 80%;
+}
+
+
+.right span:nth-of-type(3n + 2) {
+  background-color: purple;
+}
+
+.span {
+  margin: 1px;
+}
+
+
+.input:focus {
+ background: red;
+ color: white;
+  }
+
+.title:hover {
+  color: red;
+
+}
+
+.t1 {
+  font-size: 500%;
+}
+
+.t1:link { color: blue; } 
+.t1:visited { color: green; } 
+.t1:hover { font-weight: bold; } 
+.t1:active { color: salmon; } 
+

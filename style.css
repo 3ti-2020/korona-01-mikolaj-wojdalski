@@ -1,27 +1,80 @@
 
-body{
-    background: purple;
-    }
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-areas:
-	'top top right'
-    'bot bot right';
-}
-.bot{
-    grid-area: bot;
-    background: black;
+@font-face {   font-family: 'font';   
+    src: url('Jersey Sharp.ttf') format('truetype'); 
 }
 
-.top{
-    grid-area: top;
-    background: yellow;
+
+
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: repeat(5, 1fr);
+  height: 100vh;
+  grid-template-areas:
+    "top top top"
+    "left mid right "
+    "left mid right "
+    "leftv2 mid right "
+	"leftv2 mid right";
 }
-.right{
-    grid-area: right;
-    background: blue;
+
+.item {
+  margin: 3px;
+  background-color: blue;
 }
+
+.top {
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  font-size: 70px;
+  font-family: font;
+}
+
+.mid {
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: green;
+  font-size: 30px;
+ 
+  
+}
+
+.header{
+ height: 100px;
+
+}
+
+
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  font-size: 70px;
+  font-family: font;
+}
+
+.leftv2 {
+  grid-area: leftv2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  font-size: 70px;
+  font-family: font;
+}
+
