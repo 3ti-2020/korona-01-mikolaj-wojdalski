@@ -1,0 +1,127 @@
+
+@font-face {   font-family: 'font';   
+    src: url('Jersey Sharp.ttf') format('truetype'); 
+}
+
+
+@keyframes obrazek_animacja {
+0%  {
+transform: rotate(0deg);
+	}
+100% {
+transform: rotate(360deg);
+	 }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: repeat(6, 1fr);
+  height: 120vh;
+  grid-template-areas:
+    "top top top"
+	"road road road"
+    "left mid right "
+    "left mid right "
+    "leftv2 mid right "
+	"leftv2 mid right";
+}
+
+.item {
+  margin: 3px;
+  background-color: blue;
+}
+
+.top {
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+ 
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  font-size: 70px;
+  font-family: font;
+  
+}
+
+.mid {
+  grid-area: mid;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: green;
+  font-size: 30px;
+  
+ 
+}
+
+.road {
+	grid-area: road;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('road.png');
+	
+
+}
+
+.header{
+ height: 120px;
+
+}
+
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  font-size: 70px;
+  font-family: font;
+}
+
+.leftv2 {
+  grid-area: leftv2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  font-size: 70px;
+  font-family: font;
+
+}
+
+.zegar{
+	
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 60px;
+ 
+}
+
+
+@keyframes jazda{
+  0%{right: 1420px;}
+  50%{right: 0px;}
+  99%{right: 1420px;}
+  100%{transform: scaleX(-1);}
+}
+
+.bolid{
+  position: absolute;
+  height: 100px;
+  top: 235px;
+  right: 1420px;
+}
+
